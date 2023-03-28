@@ -1,0 +1,12 @@
+package main
+
+import "fmt"
+
+func main() {
+	var numero = [4]float64{1.94, 2.64, 3.70, 4.56}
+	produto := 1.0
+	for _, numero := range numero {
+		produto *= numero
+	}
+	fmt.Print(produto)
+}
