@@ -1,0 +1,11 @@
+package main
+
+import "fmt"
+
+func main() {
+	numero := []int{1, 2, 3, 4, 5}
+	fmt.Print(numero)
+	numeros := append(numero[:2], numero[3:]...)
+	fmt.Print(numeros)
+}
+
