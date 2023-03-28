@@ -1,0 +1,13 @@
+package main
+
+import "fmt"
+
+func main() {
+	var numero = [3]int{1, 2, 3}
+	soma := 0
+	for _, numero := range numero {
+		soma += numero
+	}
+	fmt.Print(soma)
+}
+
