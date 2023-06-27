@@ -1,0 +1,20 @@
+package main
+
+import "fmt"
+
+func main() {
+	// Criação do array
+	array := [5]int{2, 6, 9, 12, 15}
+
+	// Criação do slice com elementos múltiplos de 3
+	slice := []int{}
+
+	for _, value := range array {
+		if value%3 == 0 {
+			slice = append(slice, value)
+		}
+	}
+
+	// Impressão do novo slice
+	fmt.Println("Novo Slice:", slice)
+}
