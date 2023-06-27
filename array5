@@ -1,0 +1,32 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	// Criação da matriz
+	matriz := make([][]int, 3) // 3 linhas
+	for i := range matriz {
+		matriz[i] = make([]int, 2) // 2 colunas
+	}
+
+	// Preenchimento da matriz com valores informados pelo usuário
+	for i := 0; i < 3; i++ { // Itera sobre as linhas
+		for j := 0; j < 2; j++ { // Itera sobre as colunas
+			var valor int
+			fmt.Printf("Informe o valor para a posição [%d][%d]: ", i, j)
+			fmt.Scan(&valor)
+			matriz[i][j] = valor
+		}
+	}
+
+	// Impressão da matriz resultante
+	fmt.Println("Matriz resultante:")
+	for i := 0; i < 3; i++ { // Itera sobre as linhas
+		for j := 0; j < 2; j++ { // Itera sobre as colunas
+			fmt.Printf("%d ", matriz[i][j])
+		}
+		fmt.Println() // Pula para a próxima linha
+	}
+}
