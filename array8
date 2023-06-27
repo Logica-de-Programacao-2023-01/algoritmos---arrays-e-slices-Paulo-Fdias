@@ -1,0 +1,32 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	slice := []string{"banana", "abacaxi", "maçã", "pera", "laranja", "uva", "manga", "abacate"}
+
+	// Solicitar valor ao usuário
+	var valor string
+	fmt.Print("Informe um valor: ")
+	fmt.Scanln(&valor)
+
+	// Remover ocorrências do valor no slice
+	novoSlice := removerOcorrencias(slice, valor)
+
+	// Imprimir resultado
+	fmt.Println(novoSlice)
+}
+
+func removerOcorrencias(slice []string, valor string) []string {
+	var novoSlice []string
+
+	for _, item := range slice {
+		if item != valor {
+			novoSlice = append(novoSlice, item)
+		}
+	}
+
+	return novoSlice
+}
