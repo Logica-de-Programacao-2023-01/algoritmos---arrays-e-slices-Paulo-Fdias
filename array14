@@ -1,0 +1,37 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	slice := make([]int, 8)
+
+	// Preenche o slice com valores sequenciais
+	for i := 0; i < len(slice); i++ {
+		slice[i] = i
+	}
+
+	// Imprime o slice original
+	fmt.Println("Slice original:", slice)
+
+	// Solicita ao usuário os índices para troca
+	var index1, index2 int
+	fmt.Println("Digite dois índices (entre 0 e 7) para trocar de posição:")
+	fmt.Print("Índice 1: ")
+	fmt.Scanln(&index1)
+	fmt.Print("Índice 2: ")
+	fmt.Scanln(&index2)
+
+	// Verifica se os índices são válidos
+	if index1 < 0 || index1 >= len(slice) || index2 < 0 || index2 >= len(slice) {
+		fmt.Println("Índices inválidos.")
+		return
+	}
+
+	// Realiza a troca de posição
+	slice[index1], slice[index2] = slice[index2], slice[index1]
+
+	// Imprime o slice resultante
+	fmt.Println("Slice resultante:", slice)
+}
