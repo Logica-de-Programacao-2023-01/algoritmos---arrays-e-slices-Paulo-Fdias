@@ -1,0 +1,27 @@
+package main
+
+import "fmt"
+
+func main() {
+	// Criação do array bidimensional
+	array := [2][3]int{
+		{1, 2, 3},
+		{4, 5, 6},
+	}
+
+	// Solicitação de índices ao usuário
+	var linha, coluna int
+	fmt.Print("Informe o índice da linha: ")
+	fmt.Scanln(&linha)
+	fmt.Print("Informe o índice da coluna: ")
+	fmt.Scanln(&coluna)
+
+	// Verifica se os índices são válidos
+	if linha >= 0 && linha < 2 && coluna >= 0 && coluna < 3 {
+		// Imprime o valor armazenado na posição informada
+		valor := array[linha][coluna]
+		fmt.Printf("O valor armazenado na posição [%d][%d] é: %d\n", linha, coluna, valor)
+	} else {
+		fmt.Println("Índices inválidos!")
+	}
+}
